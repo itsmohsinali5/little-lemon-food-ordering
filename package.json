@@ -13,6 +13,7 @@
     "@react-native-async-storage/async-storage": "^1.19.3",
     "@react-navigation/native": "^6.1.7",
     "@react-navigation/native-stack": "^6.9.13",
+    "add": "^2.0.6",
     "expo": "~49.0.10",
     "expo-checkbox": "^2.5.0",
     "expo-font": "^11.6.0",
