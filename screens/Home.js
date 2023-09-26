@@ -22,7 +22,6 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import Constants from "expo-constants";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
-import { AntDesign } from "@expo/vector-icons";
 
 const API_URL =
   "https://raw.githubusercontent.com/Meta-Mobile-Developer-PC/Working-With-Data-API/main/capstone.json";
@@ -211,7 +210,6 @@ const Home = ({ navigation }) => {
           iconColor="#333333"
           inputStyle={{ color: "#333333" }}
           elevation={0}
-          icon={() => <AntDesign name="search1" size={24} color="black" />}
         />
       </View>
       <Text style={styles.delivery}>ORDER FOR DELIVERY!</Text>
