@@ -52,8 +52,15 @@ export default function HomeScreen({ navigation }) {
     }
   };
 
-  const filterMenu = () =>
-    filterMenuItems(activeFilters, searchInput).then(setMenuItems);
+  const filterMenu = () => {
+    filterMenuItems(activeFilters, searchInput)
+      .then((filteredMenu) => {
+        setMenuItems(filteredMenu);
+      })
+      .catch((error) => {
+        console.error("Error filtering menu items", error);
+      });
+  };  
 
   useEffect(() => {
     const debouncedFilterMenu = debounce(filterMenu, 500);

@@ -105,9 +105,10 @@ const filterMenuItems = (categories, searchInput) => {
         queryArray.push(`LOWER(name) LIKE '%${searchInput.toLowerCase()}%'`);
       }
       if (categories.length) {
-        for (const catagory of categories) {
-          queryArray.push(`category='${catagory.toLowerCase()}'`);
-        }
+        const categoryQueries = categories.map(
+          (category) => `category='${category.toLowerCase()}'`
+        );
+        queryArray.push(`(${categoryQueries.join(" OR ")})`);
       }
       const queryString = queryArray.length
         ? "where " + queryArray.join(" AND ")
